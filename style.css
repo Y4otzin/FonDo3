@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.parallax-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+}
+
+.layer-1 {
+    background-image: url('assets/entrada.jpg');
+    transform: translateZ(-300px) scale(1.3);
+}
+
+.layer-2 {
+    background-image: url('assets/entrada.jpg');
+    transform: translateZ(-150px) scale(1.15);
+    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+}
+
+.layer-3 {
+    background-image: url('assets/entrada.jpg');
+    transform: translateZ(0) scale(1);
+    clip-path: polygon(0% 30%, 100% 20%, 100% 70%, 0% 80%);
+}
+
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 10;
+    transition: opacity 1s;
+}
+
+#install-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+}
